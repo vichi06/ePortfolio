@@ -5,8 +5,8 @@ import Img from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { motion, useAnimation } from "framer-motion"
 
-import { useOnScreen } from "../../hooks/"
-import Context from "../../context/"
+import { useOnScreen } from "../../hooks"
+import Context from "../../context"
 import ContentWrapper from "../../styles/contentWrapper"
 
 const StyledSection = styled.section`
@@ -62,7 +62,7 @@ const StyledContentWrapper = styled(ContentWrapper)`
   }
 `
 
-const About = ({ content }) => {
+const Formations = ({ content }) => {
   const { frontmatter, body } = content[0].node
   const { isIntroDone } = useContext(Context).state
   const tControls = useAnimation()
@@ -85,7 +85,7 @@ const About = ({ content }) => {
   }, [isIntroDone, tControls, iControls, tOnScreen, iOnScreen])
 
   return (
-    <StyledSection id="about">
+    <StyledSection id="formations">
       <StyledContentWrapper>
         <motion.div
           className="inner-wrapper"
@@ -114,7 +114,7 @@ const About = ({ content }) => {
   )
 }
 
-About.propTypes = {
+Formations.propTypes = {
   content: PropTypes.arrayOf(
     PropTypes.shape({
       node: PropTypes.shape({
@@ -125,4 +125,4 @@ About.propTypes = {
   ).isRequired,
 }
 
-export default About
+export default Formations

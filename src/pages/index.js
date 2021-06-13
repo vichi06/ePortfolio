@@ -7,7 +7,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/sections/hero"
 import Articles from "../components/sections/articles"
-import About from "../components/sections/about"
+import Formations from "../components/sections/formations"
 import Interests from "../components/sections/interests"
 import Projects from "../components/sections/projects"
 import Contact from "../components/sections/contact"
@@ -37,10 +37,10 @@ const IndexPage = ({ data }) => {
         />
         <Hero content={data.hero.edges} />
         {/* Articles is populated via Medium RSS Feed fetch */}
-        <Articles />
-        <About content={data.about.edges} />
-        <Interests content={data.interests.edges} />
+        {/* <Articles /> */}
+        <Formations content={data.formations.edges} />
         <Projects content={data.projects.edges} />
+        <Interests content={data.interests.edges} />
         <Contact content={data.contact.edges} />
       </Layout>
     </GlobalStateProvider>
@@ -86,7 +86,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    about: allMdx(filter: { fileAbsolutePath: { regex: "/index/about/" } }) {
+    formations: allMdx(
+      filter: { fileAbsolutePath: { regex: "/index/formations/" } }
+    ) {
       edges {
         node {
           body
@@ -140,6 +142,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             category
+            enterprise
             emoji
             external
             github

@@ -287,6 +287,8 @@ const Projects = ({ content }) => {
                   <div className="details">
                     <div className="category">
                       {frontmatter.emoji} {frontmatter.category}
+                      {" - "}
+                      {frontmatter.enterprise}
                     </div>
                     <div className="title">{frontmatter.title}</div>
                     <MDXRenderer>{body}</MDXRenderer>
