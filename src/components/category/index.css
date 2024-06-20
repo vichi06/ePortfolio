@@ -1,0 +1,40 @@
+.Category {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  cursor: pointer;
+
+  p,
+  h1 {
+    transition: 0.2s;
+  }
+
+  &:hover {
+    p,
+    h1 {
+      -ms-transform: skewX(-20deg);
+      transform: skewX(-20deg);
+    }
+
+    .Button {
+      background-color: white;
+      color: #030712;
+      transform: scale(1.1);
+    }
+  }
+
+  & h1 {
+    font-size: 4em;
+    margin: 0;
+  }
+
+  & > div:first-child {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+
+    & > p {
+      opacity: 0.5;
+    }
+  }
+}

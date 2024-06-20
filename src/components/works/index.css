@@ -1,0 +1,24 @@
+.Works {
+  margin: 25px 0;
+
+  & > div {
+    cursor: pointer;
+    height: 450px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100px;
+    }
+  }
+}
+
+.Works-front {
+}
+
+.Works-back {
+}

@@ -1,0 +1,12 @@
+.Education {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.Education-footer {
+  color: black;
+  font-size: 15px;
+  text-align: center;
+  padding-bottom: 15px !important;
+}

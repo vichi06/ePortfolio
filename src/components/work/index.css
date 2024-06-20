@@ -1,0 +1,11 @@
+.Work {
+}
+
+.Work-opened {
+  height: 100%;
+  color: black;
+  padding: 20px;
+}
+
+.Work-closed {
+}

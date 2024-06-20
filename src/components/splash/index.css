@@ -1,0 +1,15 @@
+.Splash {
+  position: fixed; /* or absolute */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 10px;
+  background: linear-gradient(to right, #030712, #6d7483);
+  transition: width 1s ease;
+}
