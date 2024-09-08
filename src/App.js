@@ -4,7 +4,7 @@ import Category from "./components/category";
 import { BsArrowRight } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
 import Splash from "./components/splash";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AboutMe from "./components/aboutMe";
 import Education from "./components/education";
 import Career from "./components/career";
@@ -15,13 +15,13 @@ const tabs = [
   {
     id: 1,
     title: "About Me",
-    desc: "who I am personnaly regarding hobbits, values and passions",
+    desc: "who I am personally regarding hobbits, values and passions",
     component: AboutMe,
   },
   {
     id: 2,
     title: "Education",
-    desc: "in what schools have I studies and what diplomas popped up",
+    desc: "in what schools I have studies and what diplomas popped up",
     component: Education,
   },
   {
@@ -86,7 +86,16 @@ function App() {
             key={index}
           />
         ))}
-        {selectedTab && <selectedTab.component />}
+        <div
+          className="App-component"
+          style={{
+            transform:
+              selectedTab === null ? "translateY(-10%)" : "translateY(0)",
+            opacity: selectedTab === null ? 0 : 1,
+          }}
+        >
+          {selectedTab && <selectedTab.component />}
+        </div>
         <hr />
         <div className="App-footer" id="footer">
           <div>
@@ -95,6 +104,7 @@ function App() {
               <a
                 target="_blank"
                 href="https://www.linkedin.com/in/vincent-nguyen-van-nguyen-2a783319b/"
+                rel="noreferrer"
               >
                 LINKEDIN
               </a>

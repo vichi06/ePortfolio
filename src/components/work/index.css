@@ -1,11 +1,30 @@
 .Work {
-}
-
-.Work-opened {
-  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   color: black;
-  padding: 20px;
-}
+  background-color: white;
+  padding: 10px;
 
-.Work-closed {
+  & .Work-Logo {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+    & img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  & p {
+    margin: 0;
+  }
+
+  img {
+    width: 100px;
+  }
 }

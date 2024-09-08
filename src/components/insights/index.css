@@ -1,2 +1,139 @@
-.AboutMe {
+.Insights {
+  margin-top: 10px;
+
+  & .Insights-comments {
+    background-color: white;
+    color: #030712;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 1.5 white;
+    width: 30em;
+    margin-bottom: 10em;
+
+    .Insights-comments-header {
+      border-bottom: 1.5px solid lightgray;
+      padding: 2px 20px;
+      font-size: 20px;
+      font-weight: bold;
+
+      & p {
+        margin: 15px 0;
+      }
+    }
+  }
+
+  & .Insights-no-comments {
+    padding: 20px;
+    margin-top: 0;
+  }
+
+  & .Insights-comment {
+    padding: 20px 20px 10px 20px;
+    border-bottom: 1.5px solid lightgray;
+
+    &:last-child {
+      border: none;
+    }
+
+    & p {
+      margin: 10px 0;
+    }
+
+    & > div:first-child {
+      display: flex;
+      align-items: center;
+
+      & p {
+        margin: 0;
+      }
+
+      & > div:first-child {
+        background-color: lightgray;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        align-items: center;
+        text-align: center;
+        border-radius: 50%;
+      }
+
+      & > div:last-child {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  & label {
+    font-size: 45px;
+    font-weight: bold;
+  }
+
+  & input,
+  textarea {
+    border: none;
+    border-bottom: 1px solid whitesmoke;
+    background-color: transparent;
+    color: white;
+    margin-left: 20px;
+    padding: 10px 0;
+    font: inherit;
+
+    &:focus {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid grey;
+    }
+  }
+
+  & textarea {
+    display: block;
+    margin: 0;
+    width: 100%;
+  }
+
+  & button {
+    display: flex;
+    width: 100%;
+    font-size: 50px;
+    border: none;
+    padding: 20px 40px;
+    font-weight: 600;
+    text-align: left;
+    border-radius: 50px;
+    color: #030712;
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: transparent 3px solid;
+    position: relative;
+
+    & > div {
+      display: flex;
+      align-self: center;
+      position: absolute;
+      margin-left: 10px;
+      transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+      left: 24%;
+
+      & > svg {
+        color: white;
+        opacity: 0;
+        transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    }
+
+    &:hover {
+      color: white;
+      background-color: #030712;
+      border: white 3px solid;
+
+      & > div {
+        left: 90%;
+        & > svg {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
