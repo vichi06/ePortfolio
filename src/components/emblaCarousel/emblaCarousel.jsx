@@ -106,7 +106,7 @@ const EmblaCarousel = (props) => {
                   alt="Your alt text"
                 />
                 <p className="embla__parallax__text">
-                  Bouldering (<small>bloc/voie exté/inté</small>)
+                  Climbing (<small>bouldering/route inside or outside</small>)
                 </p>
               </div>
             </div>
@@ -125,7 +125,7 @@ const EmblaCarousel = (props) => {
               </div>
             </div>
           </div>
-          <div className="embla__slide">
+          {/* <div className="embla__slide">
             <div className="embla__parallax">
               <div className="embla__parallax__layer">
                 <img
@@ -138,7 +138,7 @@ const EmblaCarousel = (props) => {
                 </p>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="embla__slide">
             <div className="embla__parallax">
               <div className="embla__parallax__layer">
@@ -148,7 +148,7 @@ const EmblaCarousel = (props) => {
                   alt="Your alt text"
                 />
                 <p className="embla__parallax__text">
-                  Web Development (<small>code, design</small>)
+                  Web Development/Design (<small>code, design</small>)
                 </p>
               </div>
             </div>

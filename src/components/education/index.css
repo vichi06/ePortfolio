@@ -5,8 +5,14 @@
     &:hover {
       transform: translateY(1px);
 
-      & .Education-Circle > div {
-        background-color: orange;
+      & .Education-Circle {
+        & svg {
+          animation: spin 1s linear infinite;
+        }
+
+        & > div {
+          background-color: orange;
+        }
       }
 
       & .Education-Vertical-Line {
@@ -50,6 +56,10 @@
     align-items: center;
     justify-content: center;
 
+    & svg {
+      position: absolute;
+    }
+
     & > div {
       width: 100%;
       height: 100%;
@@ -57,5 +67,19 @@
       background-color: grey;
       transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
     }
+  }
+
+  & svg {
+    transition: 1s;
+    color: white;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

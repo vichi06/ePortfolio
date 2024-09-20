@@ -35,7 +35,11 @@ const education = [
     diploma: "DUT Informatique",
     logo: descartes,
     details: [
-      "End of studies intership with a researcher of the ENS working on cognitive sciences. Development of a web experience (spaceship game) to collect sensitivity results from patients.",
+      <>
+        End of studies <u>internship</u> with a researcher of the <b>ENS</b>{" "}
+        (Ecole normale Supérieure) working on cognitive sciences. Development of
+        a web experience to collect sensitivity results from patients.
+      </>,
     ],
   },
   {
@@ -46,7 +50,11 @@ const education = [
     diploma: "Engineer Diploma, CTI Certified",
     logo: efrei,
     details: [
-      "From October 2023 - March 2024, University exchange with the Nagoya Institute of Technology in Japan for a 6 months research on Artificial Intelligence.",
+      <>
+        From October 2023 - March 2024, <u>University exchange</u> with the{" "}
+        <b>Nagoya Institute of Technology</b> in Japan for a 6 months research
+        on Artificial Intelligence.
+      </>,
     ],
   },
 ];
@@ -78,7 +86,7 @@ function Education() {
             <div>
               <div className="Education-Circle" style={{ padding: "5px 0" }}>
                 <div style={{ width: "80%", height: "80%" }} />
-                <BsStars style={{ position: "absolute" }} color="white" size={10} />
+                <BsStars size={10} />
               </div>
               <p style={{ width: "fit-content" }}>{d}</p>
             </div>

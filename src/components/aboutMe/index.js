@@ -1,15 +1,11 @@
 import "./index.css";
 import EmblaCarousel from "../emblaCarousel/emblaCarousel";
-import { useState } from "react";
 
 const OPTIONS = {};
 const SLIDE_COUNT = 5;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 function AboutMe() {
-  const [openQualities, setOpenQualities] = useState(true);
-  const [openLimits, setOpenLimits] = useState(true);
-
   return (
     <div className="AboutMe">
       <p>
@@ -24,13 +20,8 @@ function AboutMe() {
         <h1>How people and tests see me</h1>
         <div>
           <div>
-            <h3
-              style={{ backgroundColor: "#76A380" }}
-              // onClick={() => setOpenQualities(!openQualities)}
-            >
-              Qualities
-            </h3>
-            <div className={openQualities ? "active" : ""}>
+            <h3 style={{ backgroundColor: "#76A380" }}>Qualities</h3>
+            <div>
               <p>Cooperative,</p>
               <p>Thoughtful,</p>
               <p>Intuitive,</p>
@@ -39,13 +30,8 @@ function AboutMe() {
             </div>
           </div>
           <div>
-            <h3
-              style={{ backgroundColor: "#B15555" }}
-              // onClick={() => setOpenLimits(!openLimits)}
-            >
-              Limits
-            </h3>
-            <div className={openLimits ? "active" : ""}>
+            <h3 style={{ backgroundColor: "#B15555" }}>Limits</h3>
+            <div>
               <p>Reserved,</p>
               <p>Hesitant,</p>
               <p>Distant,</p>
