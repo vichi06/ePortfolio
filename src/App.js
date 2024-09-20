@@ -33,7 +33,7 @@ const tabs = [
   {
     id: 4,
     title: "Works",
-    desc: "what kind of stuff I realized",
+    desc: "what stuff I developed in freelance",
     component: Works,
   },
   {
