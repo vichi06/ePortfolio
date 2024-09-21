@@ -1,15 +1,18 @@
-import "./App.css";
-import Button from "./components/button";
-import Category from "./components/category";
+import { useEffect, useState } from "react";
+
 import { BsArrowRight } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
+
+import Button from "./components/button";
+import Category from "./components/category";
 import Splash from "./components/splash";
-import { useState } from "react";
 import AboutMe from "./components/aboutMe";
 import Education from "./components/education";
 import Career from "./components/career";
 import Works from "./components/works";
 import Insights from "./components/insights";
+
+import "./App.css";
 
 const tabs = [
   {
@@ -47,11 +50,22 @@ const tabs = [
 function App() {
   const [isLoading, setIsLoading] = useState(false);
   const [selectedTab, setSelectedTab] = useState(null);
+  const [showContent, setShowContent] = useState(false);
 
-  const handleTabSelection = (selectedTabId) => {
-    const selected = tabs.find((tab) => tab.id === selectedTabId);
-    setSelectedTab(selected);
+  const handleTabSelection = (index) => {
+    setShowContent(false);
+    setSelectedTab(index === selectedTab ? null : index);
   };
+
+  useEffect(() => {
+    if (selectedTab !== null)
+      setTimeout(() => {
+        setShowContent(true);
+      }, 200);
+  }, [selectedTab]);
+
+  const ComponentToRender =
+    selectedTab !== null ? tabs[selectedTab].component : null;
 
   if (isLoading) return <Splash setIsLoading={setIsLoading} />;
   else
@@ -75,26 +89,23 @@ function App() {
         <hr />
         {tabs.map((tab, index) => (
           <Category
-            tab={tab}
-            select={() => handleTabSelection(tab.id)}
-            close={(event) => {
-              event.stopPropagation();
-              setSelectedTab(null);
-            }}
-            closed={selectedTab && selectedTab?.id !== tab.id}
-            selected={selectedTab === tab}
             key={index}
+            tab={tab}
+            onClick={() => handleTabSelection(index)}
+            isHidden={selectedTab !== null && selectedTab !== index}
+            isSelected={selectedTab === index}
           />
         ))}
         <div
           className="App-component"
           style={{
-            transform:
-              selectedTab === null ? "translateY(-10%)" : "translateY(0)",
-            opacity: selectedTab === null ? 0 : 1,
+            transform: `translateY(${
+              selectedTab === null || !showContent ? "-5%" : 0
+            })`,
+            opacity: selectedTab === null || !showContent ? 0 : 1,
           }}
         >
-          {selectedTab && <selectedTab.component />}
+          {showContent && selectedTab !== null ? <ComponentToRender /> : ""}
         </div>
         <hr />
         <div className="App-footer" id="footer">

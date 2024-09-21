@@ -1,22 +1,20 @@
 import Button from "../button";
+
 import "./index.css";
+
 import { BsArrowRight } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
 
-function Category({ tab, select, close, closed, selected }) {
+function Category({ tab, onClick, isHidden, isSelected }) {
   return (
-    <div
-      className="Category"
-      onClick={selected ? close : select}
-      style={closed ? { opacity: 0, height: 0, pointerEvents: "none" } : {}}
-    >
+    <div className={`Category ${isHidden ? "hideC" : ""}`} onClick={onClick}>
       <div>
         <h1>{tab.title}</h1>
         <p>({tab.desc})</p>
       </div>
       <div>
         <Button>
-          {selected ? <IoMdClose size={20} /> : <BsArrowRight size={20} />}
+          {isSelected ? <IoMdClose size={20} /> : <BsArrowRight size={20} />}
         </Button>
       </div>
     </div>

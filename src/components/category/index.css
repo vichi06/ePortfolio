@@ -3,6 +3,8 @@
   justify-content: space-between;
   align-items: baseline;
   cursor: pointer;
+  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+  max-height: 100px;
 
   p,
   h1 {
@@ -37,4 +39,10 @@
       opacity: 0.5;
     }
   }
+}
+
+.hideC {
+  opacity: 0;
+  pointer-events: none;
+  max-height: 0;
 }
