@@ -1,16 +1,11 @@
 import "./index.css";
+
 import { LuExternalLink } from "react-icons/lu";
 
-function Work({ work, index }) {
+function Work({ work, selected }) {
   return (
-    <div className="Work">
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+    <div className={`Work ${selected ? "selectedW" : ""}`}>
+      <div>
         <div className="Work-Logo">
           <img src={work.logo} alt="logo" />
         </div>
@@ -21,7 +16,7 @@ function Work({ work, index }) {
             target="_blank"
             rel="noreferrer"
           >
-            <LuExternalLink size={25}/>
+            <LuExternalLink size={25} />
           </a>
         )}
       </div>
