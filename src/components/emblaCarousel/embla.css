@@ -17,6 +17,7 @@
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
+  cursor: grab;
 }
 .embla__slide__img {
   border-radius: 1.8rem;
