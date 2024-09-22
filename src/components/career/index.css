@@ -1,2 +1,18 @@
-.AboutMe {
+.Career {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+
+  & .Career-month {
+    text-align: right;
+  }
+
+  & h1 {
+    font-size: 8vw;
+    margin: 0;
+    text-align: center;
+    background-color: white;
+    color: #030712;
+    padding: 0 15px;
+  }
 }
