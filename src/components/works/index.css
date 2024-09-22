@@ -1,56 +1,63 @@
 .Works {
   display: flex;
   justify-content: space-between;
-}
 
-.Works-Leftside {
-  flex: 3;
-  padding-right: 10px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  justify-content: space-between;
-}
-
-.Works-Rightside {
-  flex: 2;
-  margin: 25px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  border-left: 1px solid white;
-  padding-left: 10px;
-}
-
-.Works-Filters {
-  display: flex;
-  position: sticky;
-  font-weight: bold;
-  bottom: 20px;
-  justify-content: space-between;
-  margin: 20px 0;
-
-  & > div:first-child {
+  .Works-Leftside {
+    flex: 3;
+    padding-right: 10px;
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    position: relative;
+    justify-content: space-between;
   }
 
-  & button {
-    border: 1px solid white;
-    color: white;
-    padding: 9px;
-    border-radius: 10px;
-    background-color: transparent;
-    cursor: pointer;
-    transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  .Works-Rightside {
+    flex: 2;
+    margin: 25px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-left: 1px solid white;
+    padding-left: 10px;
+  }
 
-    &:hover {
-      scale: 1.1;
+  .Works-Filters {
+    display: flex;
+    position: sticky;
+    font-weight: bold;
+    bottom: 20px;
+    justify-content: space-between;
+    margin: 20px 0;
+    flex-flow: wrap;
+    gap: 5px;
+
+    & > div:first-child {
+      display: flex;
+      gap: 10px;
+      flex-flow: wrap;
+    }
+
+    & button {
+      border: 1px solid white;
+      color: white;
+      padding: 9px;
+      border-radius: 10px;
+      background-color: transparent;
+      cursor: pointer;
+      transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        scale: 1.1;
+      }
+    }
+
+    & .active {
+      background-color: white;
+      color: #030712;
     }
   }
 
-  & .active {
-    background-color: white;
-    color: #030712;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 }

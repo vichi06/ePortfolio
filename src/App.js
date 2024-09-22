@@ -78,7 +78,7 @@ function App() {
             </p>
           </div>
           <div>
-            <a href="#footer">
+            <a href="#footer" style={{ whiteSpace: "nowrap" }}>
               <Button>
                 <p>Let's talk</p>
                 <BsArrowRight size={20} />

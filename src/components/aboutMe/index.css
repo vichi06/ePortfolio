@@ -9,15 +9,18 @@
 
   .HowPeopleSeeMe > div > div {
     display: flex;
+    flex-flow: wrap;
 
     & > div {
       display: flex;
       transition: all 1s;
+      flex-flow: wrap;
 
       & > p {
         color: white;
         border-radius: 10%;
         padding: 5px;
+        margin: 10px 0 0 0;
         width: fit-content;
       }
     }
@@ -28,5 +31,10 @@
       border-radius: 5px;
       margin: 5px 0;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 5px 0 10px 0;
+    padding: 0 20px;
   }
 }

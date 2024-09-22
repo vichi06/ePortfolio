@@ -5,10 +5,15 @@ html {
 .App {
   padding: 2em 4em;
 
+  @media screen and (max-width:600px) {
+    padding: 1em 2em;
+  }
+
   .App-header {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    align-items: center;
   }
 
   .App-component {

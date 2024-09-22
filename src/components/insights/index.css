@@ -6,8 +6,8 @@
     color: #030712;
     border-radius: 10px;
     box-shadow: 10px 10px 10px 1.5 white;
-    width: 30em;
-    margin-bottom: 10em;
+    max-width: 30em;
+    margin-bottom: 8vw;
 
     .Insights-comments-header {
       border-bottom: 1.5px solid lightgray;

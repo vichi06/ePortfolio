@@ -48,7 +48,7 @@
 
   .Education-Circle {
     background-color: #030712;
-    width: 20px;
+    min-width: 20px;
     height: 20px;
     padding: 10px 0;
     z-index: 2;

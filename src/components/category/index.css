@@ -3,17 +3,33 @@
   justify-content: space-between;
   align-items: baseline;
   cursor: pointer;
-  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
   max-height: 100px;
 
-  p,
-  h1 {
+  & > div:first-child {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+
+    & > p {
+      opacity: 0.5;
+    }
+  }
+
+  h1,
+  p {
     transition: 0.2s;
   }
 
+  & h1 {
+    font-size: 5.5vw;
+    margin: 0;
+    white-space: nowrap;
+  }
+
   &:hover {
-    p,
-    h1 {
+    h1,
+    p {
       -ms-transform: skewX(-20deg);
       transform: skewX(-20deg);
     }
@@ -25,18 +41,17 @@
     }
   }
 
-  & h1 {
-    font-size: 4em;
-    margin: 0;
-  }
+  @media screen and (max-width: 768px) {
+    align-items: center;
+    margin-bottom: 5px;
 
-  & > div:first-child {
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
+    & > div:first-child {
+      flex-direction: column;
+      gap: 0;
 
-    & > p {
-      opacity: 0.5;
+      & p {
+        margin: 0;
+      }
     }
   }
 }
